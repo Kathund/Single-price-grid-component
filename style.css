@@ -4,8 +4,43 @@
     box-sizing: border-box;
 }
 
-.container {
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright_Yellow: hsl(71, 73%, 54%);
+    --Light_Gray: hsl(204, 43%, 93%);
+    --Grayish_Blue: hsl(218, 22%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+}
+
+body {
     display: flex;
+    background-color: var(--Grayish_Blue);
     justify-content: center;
-    align-content: center;
+}
+
+.container {
+    color: black;
+}
+
+.top {
+    background: var(--Light_Gray);
+    width: 256px;
+    height: auto;
+}
+
+.top h1 {
+    color: var(--Cyan);
+}
+
+.top span {
+    color: var(--Bright_Yellow);
+}
+
+.top p {
+    color: var(--Grayish_Blue);
+}
+
+.bottom {
+    display: flex;
 }
