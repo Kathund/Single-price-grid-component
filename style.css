@@ -6,6 +6,9 @@
 
 :root {
     --Cyan: hsl(179, 62%, 43%);
+    --Top-BG: hsl(179, 62%, 43%);
+    --Left-BG: hsl(179, 60%, 48%);
+    --Right-BG: hsl(179, 86%, 54%);
     --Bright_Yellow: hsl(71, 73%, 54%);
     --Light_Gray: hsl(204, 43%, 93%);
     --Grayish_Blue: hsl(218, 22%, 67%);
@@ -15,32 +18,41 @@
 
 body {
     display: flex;
-    background-color: var(--Grayish_Blue);
     justify-content: center;
+    align-items: center;
+    background-color: var(--Light_Gray);
 }
 
-.container {
-    color: black;
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: "one one one one"
+    "two two three three";
+    width: 600px;
+    height: 400px;
 }
 
-.top {
-    background: var(--Light_Gray);
-    width: 256px;
-    height: auto;
+.one {
+    grid-area: one;
+    background-color: var(--White);
+    border-radius: 10px 10px 0 0;
 }
 
-.top h1 {
+.one h3 {
     color: var(--Cyan);
 }
 
-.top span {
+.one h4 {
     color: var(--Bright_Yellow);
+    margin-bottom: 10px;
 }
 
-.top p {
+.one p {
     color: var(--Grayish_Blue);
+    line-height: 1.6;
 }
 
-.bottom {
-    display: flex;
+section h3, section h4 {
+    margin-bottom: 20px;
 }
