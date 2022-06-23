@@ -6,9 +6,6 @@
 
 :root {
     --Cyan: hsl(179, 62%, 43%);
-    --Top-BG: hsl(179, 62%, 43%);
-    --Left-BG: hsl(179, 60%, 48%);
-    --Right-BG: hsl(179, 86%, 54%);
     --Bright_Yellow: hsl(71, 73%, 54%);
     --Light_Gray: hsl(204, 43%, 93%);
     --Grayish_Blue: hsl(218, 22%, 67%);
@@ -17,9 +14,12 @@
 }
 
 body {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     background-color: var(--Light_Gray);
 }
 
@@ -29,21 +29,32 @@ main {
     grid-template-rows: auto auto;
     grid-template-areas: "one one one one"
     "two two three three";
-    width: 600px;
-    height: 400px;
+    width: 800px;
+    height: 600px;
+}
+
+section {
+    padding: 40px 30px;
+}
+
+section h3, section h4 {
+    margin-bottom: 20px;
 }
 
 .one {
+    padding: 18px;
     grid-area: one;
     background-color: var(--White);
     border-radius: 10px 10px 0 0;
 }
 
 .one h3 {
+    font-weight: 700;
     color: var(--Cyan);
 }
 
 .one h4 {
+    font-weight: 700;
     color: var(--Bright_Yellow);
     margin-bottom: 10px;
 }
@@ -55,4 +66,49 @@ main {
 
 section h3, section h4 {
     margin-bottom: 20px;
+}
+
+.two {
+    grid-area: two;
+    border-radius: 0 0 0 10px;
+    background: var(--Cyan);
+    color: var(--White);
+}
+
+.two h4 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.two h4 span {
+    font-size: 15px;
+    position: relative;
+    top: -6px;
+    opacity: 0.5;
+    margin-left: 3px;
+}
+
+.two button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: hsl(71, 73%, 54%);
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+.three {
+    grid-area: three;
+    background-color: hsl(179, 62%, 43%);
+    border-radius: 0 0 10px 0;
+    color: white;
+    opacity: 0.8;
+}
+
+.three p {
+    opacity: 0.7;
+    line-height: 1.4;
 }
